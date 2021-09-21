@@ -79,6 +79,7 @@ body ul {
   bottom: 40px;
   cursor: pointer;
   transition: all 0.2s ease;
+  color: var(--light);
 }
 .navbar .nav-theme:hover {
   transform: scale(1.1);

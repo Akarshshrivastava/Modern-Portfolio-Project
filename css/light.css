@@ -56,6 +56,9 @@ body.light .navbar {
     background-color: var(--light);
   box-shadow: var(--light-shadow);
 }
+body.light .navbar .nav-theme{
+  color: var(--dark);
+}
 body.light .navbar .nav-links ul .nav-link {
   color: var(--dark);
 }
