@@ -1,0 +1,96 @@
+:root {
+  --red: #d05353;
+  --light: #f6f6f6;
+  --dark: #191919;
+  --yellow: #dfc11a;
+  --shadow-sm: 4px 4px 15px rgba(211, 211, 211, 0.158);
+  --shadow-lg: 2px 2px 10px rgba(211, 211, 211, 0.158);
+  --light-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+body.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+body.light .title {
+  color: var(--yellow);
+}
+body.light .navbar .nav-theme {
+  color: var(--light);
+}
+body.light .navbar .nav-theme:hover {
+  transform: scale(1.1);
+  color: var(--red);
+}
+
+body.light .navbar .nav-links ul .nav-link:hover {
+  color: var(--red);
+}
+
+/* Hero CSS  */
+
+body.light .hero .hero-btns .prim-btn {
+  color: var(--light);
+  background-color: var(--red);
+}
+body.light .hero .hero-btns .sec-btn {
+  border: 2px solid var(--red) !important;
+  color: var(--red);
+}
+
+body.light .hero .hero-btns .sec-btn:hover {
+  background-color: var(--red);
+  color: var(--light);
+}
+
+body.light .about .about-btn {
+  border: 2px solid var(--red) !important;
+  color: var(--red);
+}
+
+body.light .about .about-btn:hover {
+  background-color: var(--red);
+  color: var(--light);
+}
+body.light .navbar {
+    background-color: var(--light);
+  box-shadow: var(--light-shadow);
+}
+body.light .navbar .nav-links ul .nav-link {
+  color: var(--dark);
+}
+/* Skills CSS  */
+body.light .skills .card-holder .card{
+    box-shadow: var(--light-shadow);
+}
+body.light .skills .card-holder .card .card-icon .material-icons {
+  color: var(--red);
+}
+
+body.light .skills .card-holder .card .card-content-lg {
+  background-color: var(--red);
+  color: var(--light);
+}
+
+/* Projects Section CSS  */
+
+body.light .projects .card-row .card img {
+    box-shadow: var(--light-shadow);
+
+}
+
+/* Contact CSS  */
+
+body.light .contacts .contact-icons-row .contact-icon:hover {
+  color: var(--red);
+}
+@media screen and (max-width: 860px) {
+  body.light .theme:hover {
+    color: var(--red);
+  }
+
+  body.light .skills .card-holder .card .card-content-sm {
+    background-color: var(--red);
+    color: var(--light);
+  }
+}

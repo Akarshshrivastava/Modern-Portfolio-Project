@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --red: #d05353;
+  --light: #f6f6f6;
+  --dark: #191919;
+  --yellow: #dfc11a;
+  --shadow-sm: 4px 4px 15px rgba(211, 211, 211, 0.158);
+  --shadow-lg: 2px 2px 10px rgba(211, 211, 211, 0.158);
+}
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.2s ease;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+body ul {
+  list-style-type: none;
+}
+.title {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--yellow);
+}
+.section {
+  margin-left: 6vw;
+  padding: 30px 120px;
+}
+/* Illustration CSS  */
+.illus {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 200px;
+}
+.space {
+  width: 100%;
+  height: 20px;
+}
+/* Navbar CSS  */
+.navbar {
+  position: fixed;
+  width: 14vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: var(--dark);
+  z-index: 999;
+}
+.navbar .logo {
+  position: absolute;
+  top: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+.navbar .logo img {
+  width: 40px;
+}
+.navbar .nav-theme {
+  position: absolute;
+  bottom: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navbar .nav-theme:hover {
+  transform: scale(1.1);
+  color: var(--red);
+}
+.navbar .nav-links ul {
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.navbar .nav-links ul .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.navbar .nav-links ul .nav-link:hover {
+  color: var(--red);
+  transform: scale(1.06);
+}
+.navbar .nav-links ul .nav-link .material-icons {
+  font-size: 24px;
+}
+.navbar .nav-links ul .nav-link .nav-text {
+  margin-top: 10px;
+}
+/* Theme Button CSS  */
+.theme {
+  display: none;
+}
+/* Hero CSS  */
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-img img {
+  width: 240px;
+  margin-bottom: 40px;
+}
+.hero .hero-title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.hero .hero-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-btns .prim-btn {
+  width: 160px;
+  padding: 15px 24px;
+  background-color: var(--red);
+  margin: 10px;
+  font-weight: 500;
+  border-radius: 3px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.hero .hero-btns .sec-btn {
+  width: 160px;
+  padding: 14px 24px;
+  border: 2px solid var(--red) !important;
+  color: var(--red);
+  font-weight: 500;
+  margin: 10px;
+  border-radius: 3px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.hero .hero-btns .prim-btn:hover {
+  transform: scale(1.05);
+}
+.hero .hero-btns .sec-btn:hover {
+  background-color: var(--red);
+  color: var(--light);
+}
+/* About Section CSS */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about .about-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 20px;
+  width: 100%;
+  text-align: justify;
+  line-height: 38px;
+}
+.about .about-btn {
+  width: 160px;
+  padding: 14px 24px;
+  border: 2px solid var(--red) !important;
+  color: var(--red);
+  font-weight: 500;
+  margin: 20px 0;
+  border-radius: 3px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.about .about-btn:hover {
+  background-color: var(--red);
+  color: var(--light);
+}
+/* Skills CSS  */
+.skills .card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: -10px;
+}
+.skills .card-holder .card {
+  position: relative;
+  overflow: hidden;
+  width: 240px;
+  height: 240px;
+  box-shadow: var(--shadow-lg);
+  margin: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skills .card-holder .card .card-icon .material-icons {
+  font-size: 38px;
+  color: var(--red);
+}
+.skills .card-holder .card .card-title {
+  margin: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+.skills .card-holder .card .card-content-lg {
+  position: absolute;
+  background-color: var(--red);
+  color: var(--light);
+  transform: translateY(100%);
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.skills .card-holder .card:hover .card-content-lg {
+  transform: translateY(0);
+}
+.skills .card-holder .card .card-content-sm {
+  display: none;
+}
+/* Projects Section CSS  */
+.projects .card-row {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.projects .card-row .card {
+  margin: 0 16px 16px 0;
+  width: 340px;
+}
+.projects .card-row .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 25px #f6f6f631;
+}
+.projects .card-row .card:hover img {
+  transform: scale(1.02);
+}
+/* Contact CSS  */
+.contacts .contact-icons-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+.contacts .contact-icons-row .contact-icon {
+  margin-right: 64px;
+  font-size: 36px;
+  transition: all 0.2s ease;
+}
+.contacts .contact-icons-row .contact-icon:hover {
+  color: var(--red);
+  transform: scale(1.04) translateY(-6px);
+}
+@media screen and (max-width: 860px) {
+  .section {
+    width: 100vw;
+    margin-left: 0px;
+    padding: 0 40px;
+  }
+  /* Illustration CSS  */
+  .illus {
+    right: 0;
+    top: 30px;
+    width: 100px;
+  }
+  /* Navbar CSS  */
+  .space {
+    width: 100%;
+    height: 10vh;
+  }
+  .navbar {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .navbar .logo {
+    display: none;
+  }
+  .navbar .nav-theme {
+    display: none;
+  }
+  .navbar .nav-links ul {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10vh;
+    width: 100vw;
+  }
+  .navbar .nav-links ul .nav-link .material-icons {
+    font-size: 20px;
+  }
+  .navbar .nav-links ul .nav-link .nav-text {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  /* Theme Button CSS  */
+  .theme {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .theme:hover {
+    transform: scale(1.1);
+    color: var(--red);
+  }
+  /* Hero CSS  */
+  .hero .hero-img img {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  .hero .hero-btns {
+    flex-direction: column;
+  }
+  .hero .hero-btns .prim-btn {
+    padding: 14px 22px;
+  }
+  .hero .hero-btns .sec-btn {
+    padding: 13px 22px;
+  }
+  .hero .hero-title {
+    text-align: center;
+    width: 200px;
+    font-size: 34px;
+  }
+  /* About Section CSS  */
+  .title {
+    font-size: 34px;
+  }
+  .about .about-content {
+    margin-top: 20px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 18px;
+  }
+  /* Skills CSS  */
+  .skills .card-holder {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .skills .card-holder .card {
+    width: 180px;
+    height: 180px;
+    align-items: flex-start;
+    overflow: visible;
+  }
+  .skills .card-holder .card .card-icon {
+    margin-left: 20px;
+  }
+  .skills .card-holder .card .card-icon .material-icons {
+    font-size: 30px;
+  }
+  .skills .card-holder .card .card-title {
+    text-align: left;
+    margin-top: 6px;
+    font-size: 18px;
+    width: 50px;
+  }
+  .skills .card-holder .card .card-content-lg {
+    display: none;
+  }
+  .skills .card-holder .card .card-content-sm {
+    display: block;
+    position: absolute;
+    background-color: var(--red);
+    font-size: 16px;
+    width: 96%;
+    height: 96%;
+    left: 60%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    line-height: 22px;
+  }
+  /* Projects Section CSS  */
+  .projects .card-row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .projects .card-row .card {
+    margin: 0;
+  }
+  .projects .card-row .card img {
+    width: 76%;
+    margin-bottom: 10px;
+  }
+  /* Contact Section CSS  */
+  .contacts .contact-icons-row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .contacts .contact-icons-row .contact-icon {
+    margin-right: 30px;
+    font-size: 32px;
+    transition: all 0.2s ease;
+  }
+  .contacts .contact-icons-row .contact-icon:hover {
+    color: var(--red);
+    transform: scale(1.04) translateY(-6px);
+  }
+}
